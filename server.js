@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 5000;
-app.set('port',(process.env.port||port))
+
 let broadcaster1;
 let broadcaster2;
 let broadcaster3;
@@ -253,4 +252,4 @@ socket.on("disconnect", () => {
 
 
 });
-server.listen(app.get('port'),function(){ console.log(`Server is running on port ${port}`)});
+server.listen(process.env.PORT || 5000);
