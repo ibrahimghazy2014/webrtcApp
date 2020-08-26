@@ -8,8 +8,14 @@
   },
   "keywords": [
     "WebRTC",
-    "SocketIO"
+    "SocketIO",
+    "heroku",
+    "node"
   ],
+  "repository":{"type":"git",
+  "url":"https://github.com/ibrahimghazy2014/webrtcApp"
+  }
+  ,
   "author": "Tanner Gabriel",
   "license": "MIT",
   "dependencies": {

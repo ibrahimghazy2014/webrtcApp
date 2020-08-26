@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
-
+const port = 3000;
+app.set('port',(process.env.port||port))
 let broadcaster1;
 let broadcaster2;
 let broadcaster3;
@@ -11,7 +12,8 @@ let broadcaster7;
 let broadcaster8;
 let broadcaster9;
 let broadcaster10;
-const port = 4000;
+
+
 
 const http = require("http");
 const server = http.createServer(app);
@@ -251,4 +253,4 @@ socket.on("disconnect", () => {
 
 
 });
-server.listen(port, () => console.log(`Server is running on port ${port}`));
+server.listen(app.get('port'),function(){ console.log(`Server is running on port ${port}`)});
