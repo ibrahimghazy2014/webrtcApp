@@ -4,6 +4,12 @@
     <title>Broadcaster</title>
     <meta charset="UTF-8" />
   </head>
+  <style>
+    video {
+  width: 100%;
+  height: 270px;
+  }
+  </style>
   <body>
     <section class="select">
       <label for="audioSource">Audio source: </label>
@@ -15,7 +21,7 @@
       <select id="videoSource"></select>
     </section>
 
-    <video playsinline autoplay muted></video>
+    <video  playsinline autoplay muted></video>
   
     <script src="/socket.io/socket.io.js"></script>
     <script src="/broadcast.js"></script>
