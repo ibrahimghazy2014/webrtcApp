@@ -2,7 +2,7 @@ const peerConnections = {};
 const config = {
   iceServers: [
     { 
-      "urls": "stun4.l.google.com:19302",
+      "urls": "stun01.sipphone.com",      
     },
     // { 
     //   "urls": "turn:TURN_IP?transport=tcp",
