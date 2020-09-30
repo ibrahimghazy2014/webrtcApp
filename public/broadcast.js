@@ -2,7 +2,7 @@ const peerConnections = {};
 const config = {
   iceServers: [
     { 
-      "urls": "stun.colouredlines.com.au:3478",
+      "urls": "stun4.l.google.com:19302",
     },
     // { 
     //   "urls": "turn:TURN_IP?transport=tcp",
