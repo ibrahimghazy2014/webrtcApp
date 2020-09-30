@@ -2,7 +2,7 @@ const peerConnections = {};
 const config = {
   iceServers: [
     { 
-      "urls": "stun01.sipphone.com",      
+      "urls": "stun:stun.l.google.com:19302",
     },
     // { 
     //   "urls": "turn:TURN_IP?transport=tcp",
@@ -11,7 +11,6 @@ const config = {
     // }
   ]
 };
-//test
 
     var  number= getUrlVars()["number"];
 const socket = io.connect(window.location.origin);
@@ -84,7 +83,7 @@ function gotDevices(deviceInfos) {
     }
   }
 }
-//v
+
 function getStream() {
   if (window.stream) {
     window.stream.getTracks().forEach(track => {
