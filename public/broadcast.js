@@ -11,6 +11,7 @@ const config = {
     // }
   ]
 };
+//test
 
     var  number= getUrlVars()["number"];
 const socket = io.connect(window.location.origin);
