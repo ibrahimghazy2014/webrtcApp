@@ -83,7 +83,7 @@ function gotDevices(deviceInfos) {
     }
   }
 }
-
+//v
 function getStream() {
   if (window.stream) {
     window.stream.getTracks().forEach(track => {
