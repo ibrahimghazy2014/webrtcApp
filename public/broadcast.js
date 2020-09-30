@@ -2,7 +2,7 @@ const peerConnections = {};
 const config = {
   iceServers: [
     { 
-      "urls": "stun:stun.l.google.com:19302",
+      "urls": "s1.taraba.net:3478"  
     },
     // { 
     //   "urls": "turn:TURN_IP?transport=tcp",
