@@ -1,11 +1,7 @@
 const peerConnections = {};
 const config = {
   iceServers: [
-    {url: "turn:173.194.72.127:19305?transport=udp",       
-     username:"CKjCuLwFEgahxNRjuTAYzc/s6OMT",
-     credential:"u1SQDR/SQsPQIxXNWQT7czc/G4c="
-    },
-    {urls:["stun:stun.l.google.com:19302"]}
+   
   ]
 };
 
