@@ -12,7 +12,7 @@ socket.on("answer"+number, (id, description) => {
 
 socket.on("watcher"+number, id => {
   const peerConnection = new RTCPeerConnection({
-    iceServers: [{url: "stun:global.stun.twilio.com:3478?transport=udp" }]
+    iceServers: []
   });
   peerConnections[id] = peerConnection;
 
