@@ -1,8 +1,6 @@
 const peerConnections = {};
 const config = {
-  iceServers: [
-   
-  ]
+  iceServers: [{url: "stun:global.stun.twilio.com:3478?transport=udp" }]
 };
 
     var  number= getUrlVars()["number"];
@@ -13,7 +11,9 @@ socket.on("answer"+number, (id, description) => {
 });
 
 socket.on("watcher"+number, id => {
-  const peerConnection = new RTCPeerConnection(config);
+  const peerConnection = new RTCPeerConnection({
+    iceServers: [{url: "stun:global.stun.twilio.com:3478?transport=udp" }]
+  });
   peerConnections[id] = peerConnection;
 
   let stream = videoElement.srcObject;
