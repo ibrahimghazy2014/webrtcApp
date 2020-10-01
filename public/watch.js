@@ -1,14 +1,19 @@
 let peerConnection;
 const config = {
-  iceServers: [
-    {
-        urls: "stun:stun.stunprotocol.org"
-    },
-    {
-        urls: 'turn:numb.viagenie.ca',
-        credential: 'muazkh',
-        username: 'webrtc@live.com'
-    },
+ // iceServers: [
+  //  {
+    //    urls: "stun:stun.stunprotocol.org"
+//},
+   // {
+    //    urls: 'turn:numb.viagenie.ca',
+//credential: 'muazkh',
+    //    username: 'webrtc@live.com'
+   // },
+//]
+iceServers: [
+  {
+    urls: ["stun:stun.l.google.com:19302"]
+  }
 ]
 };
 var  number= getUrlVars()["number"];
