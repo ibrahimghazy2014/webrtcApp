@@ -1,9 +1,17 @@
 const peerConnections = {};
 const config = {
-  iceServers: [{url: "stun:stun.innovailable.eu" }]
+  iceServers: [
+      {
+          urls: "stun:stun.stunprotocol.org"
+      },
+      {
+          urls: 'turn:numb.viagenie.ca',
+          credential: 'muazkh',
+          username: 'webrtc@live.com'
+      },
+  ]
 };
-
-    var  number= getUrlVars()["number"];
+  var  number= getUrlVars()["number"];
 const socket = io.connect(window.location.origin);
 
 socket.on("answer"+number, (id, description) => {
@@ -11,18 +19,7 @@ socket.on("answer"+number, (id, description) => {
 });
 
 socket.on("watcher"+number, id => {
-  const peerConnection = new RTCPeerConnection({
-    iceServers: [
-        {
-            urls: "stun:stun.stunprotocol.org"
-        },
-        {
-            urls: 'turn:numb.viagenie.ca',
-            credential: 'muazkh',
-            username: 'webrtc@live.com'
-        },
-    ]
-});
+  const peerConnection = new RTCPeerConnection(config);
   peerConnections[id] = peerConnection;
 
   let stream = videoElement.srcObject;
