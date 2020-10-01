@@ -1,6 +1,6 @@
 const peerConnections = {};
 const config = {
-  iceServers: [{url: "stun:global.stun.twilio.com:3478?transport=udp" }]
+  iceServers: [{url: "stun:stun.innovailable.eu" }]
 };
 
     var  number= getUrlVars()["number"];
