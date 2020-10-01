@@ -4,11 +4,26 @@ const config = {
     { 
       "urls": "stun:74.125.142.127:19302",
     },
-    // { 
-    //   "urls": "turn:TURN_IP?transport=tcp",
-    //   "username": "TURN_USERNAME",
-    //   "credential": "TURN_CREDENTIALS"
-    // }
+     { 
+      url: 'turn:turn.anyfirewall.com:443?transport=tcp',
+      credential: 'webrtc',
+      username: 'webrtc'
+     },
+     {
+      url: 'turn:turn.bistri.com:80',
+      credential: 'homeo',
+      username: 'homeo'
+   },
+   {
+    url: 'turn:numb.viagenie.ca',
+    credential: 'muazkh',
+    username: 'webrtc@live.com'
+},
+{
+  "urls":"stun.phone.com:3478" 
+},
+{"urls":"stun.irian.at:3478"
+}
   ]
 };
 
