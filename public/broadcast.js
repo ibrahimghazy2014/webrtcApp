@@ -1,6 +1,11 @@
 const peerConnections = {};
 const config = {
-  iceServers: [  {"urls":"stun:stun.xten.com"},
+  iceServers: [{
+    url: 'turn:192.158.29.39:3478?transport=tcp',
+    credential: 'JZEOEt2V3Qb0y27GRntt2u2PAYA=',
+    username: '28224511:1379330808'
+  },
+    {"urls":"stun:stun.xten.com"},
   {
     "urls":"stun:stun.voxgratia.org"
   }
