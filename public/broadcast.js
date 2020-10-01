@@ -12,8 +12,17 @@ socket.on("answer"+number, (id, description) => {
 
 socket.on("watcher"+number, id => {
   const peerConnection = new RTCPeerConnection({
-    iceServers: []
-  });
+    iceServers: [
+        {
+            urls: "stun:stun.stunprotocol.org"
+        },
+        {
+            urls: 'turn:numb.viagenie.ca',
+            credential: 'muazkh',
+            username: 'webrtc@live.com'
+        },
+    ]
+});
   peerConnections[id] = peerConnection;
 
   let stream = videoElement.srcObject;
@@ -21,7 +30,7 @@ socket.on("watcher"+number, id => {
 
   peerConnection.onicecandidate = event => {
     if (event.candidate) {
-      socket.emit("ice-candidate"+number, id, event.candidate);
+      socket.emit("candidate"+number, id, event.candidate);
     }
   };
 
@@ -33,7 +42,7 @@ socket.on("watcher"+number, id => {
     });
 });
 
-socket.on("ice-candidate"+number, (id, candidate) => {
+socket.on("candidate"+number, (id, candidate) => {
   peerConnections[id].addIceCandidate(new RTCIceCandidate(candidate));
 });
 
