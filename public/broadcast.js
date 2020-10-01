@@ -1,6 +1,9 @@
 const peerConnections = {};
 const config = {
-  iceServers: [ 
+  iceServers: [  {"urls":"stun:stun.xten.com"},
+  {
+    "urls":"stun:stun.voxgratia.org"
+  },
      { 
       url: 'turn:turn.anyfirewall.com:443?transport=tcp',
       credential: 'webrtc',
@@ -37,6 +40,7 @@ const config = {
         credential: 'webrtc',
         username: 'webrtc'
     }
+   
   ]
 };
 
