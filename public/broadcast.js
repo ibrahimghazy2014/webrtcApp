@@ -21,7 +21,7 @@ socket.on("watcher"+number, id => {
 
   peerConnection.onicecandidate = event => {
     if (event.candidate) {
-      socket.emit("candidate"+number, id, event.candidate);
+      socket.emit("ice-candidate"+number, id, event.candidate);
     }
   };
 
@@ -33,7 +33,7 @@ socket.on("watcher"+number, id => {
     });
 });
 
-socket.on("candidate"+number, (id, candidate) => {
+socket.on("ice-candidate"+number, (id, candidate) => {
   peerConnections[id].addIceCandidate(new RTCIceCandidate(candidate));
 });
 
